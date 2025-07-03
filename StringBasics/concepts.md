@@ -40,3 +40,4 @@ string paddedString = "   Hello, World!   ";
 string trimmedString = paddedString.Trim();
 Console.WriteLine(trimmedString); // Output: "Hello, World!"
 ```
+
