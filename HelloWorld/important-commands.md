@@ -1,5 +1,3 @@
-# .NET Console App: Important Commands & Startup Syntax
-
 ## Initialization Commands
 
 1. Create a new console project:
