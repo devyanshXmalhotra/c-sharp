@@ -1,6 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-int[] numbers = { 10, 20, 30, 40, 50, 60 };
+int[] numbers = { 10, 20, 80, 40, 50, 60 };
 
 // Filtering
 var filtered = numbers.Where(n => n > 30);
@@ -19,6 +19,13 @@ var descending = numbers.OrderByDescending(n => n);
 Console.WriteLine("Descending order:");
 foreach (var n in descending)
     Console.WriteLine(n);
+
+var ascending = numbers.OrderBy(n => n);
+Console.WriteLine("Ascending order:");
+foreach (var n in ascending)
+{
+    Console.WriteLine(n);
+}
 
 // Aggregation
 int sum = numbers.Sum();
@@ -54,9 +61,17 @@ Console.WriteLine("Distinct values:");
 foreach (var n in distinctNums)
     Console.WriteLine(n);
 
+string[] arrr = { "anuj", "sachin", "priyanshu", "sachin", "sachin", "priyanshu", "anuj", "anuj", "sachin", "priyanshu" };
+var distNames = arrr.Distinct().ToArray();
+for (int i = 0; i < distNames.Length; i++)
+{
+    Console.WriteLine(distNames[i]);
+}
+
 // Grouping 
 var groups = numbers.GroupBy(n => n % 2 == 0 ? "Even" : "Odd");
 foreach (var group in groups)
 {
     Console.WriteLine($"{group.Key}: {string.Join(", ", group)}");
 }
+
